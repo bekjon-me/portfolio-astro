@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { slide } from "astro:transitions";
+import { slide } from 'astro:transitions';
+
+const pageTitle = "Home Page";
+---
+<Layout title={pageTitle}>
+    <div transition:animate={slide({duration: ".5s"})} transition:name="page">
+        <h2>My awesome blog subtitle</h2>
+        <p>This is the home page</p>
+    </div>
+</Layout>

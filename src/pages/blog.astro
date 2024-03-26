@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Blog Page";
+---
+<Layout title={pageTitle}>
+    <div transition:animate="slide" transition:name="page">
+        <h2>My awesome blog subtitle</h2>
+        <p>Here is some content for the blog page</p>
+    </div>
+</Layout>
