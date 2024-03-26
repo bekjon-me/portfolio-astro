@@ -1,6 +1,6 @@
 ---
 title: 'My First Blog Post'
-pubDate: 26th March, 2024
+pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Bekjon Ishpulatov'
 image:
@@ -10,6 +10,6 @@ tags: ["blogging", "learning in public"]
 ---
 # My First Blog Post
 
-Published on: 26th March, 2024
+Published on: 2022-07-01
 
 Welcome to my _new blog_, I will share my learning journey as I build a new website.
