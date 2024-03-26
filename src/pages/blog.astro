@@ -1,10 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-const pageTitle = "Blog Page";
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const title = "My Blog";
+const allPosts = await getCollection("posts");
 ---
-<Layout title={pageTitle}>
-    <div transition:animate="slide" transition:name="page">
-        <h2>My awesome blog subtitle</h2>
-        <p>Here is some content for the blog page</p>
+<Layout title={title}>
+    <div transition:animate="slide" class="overflow-hidden shadow dark:shadow-white/10">
+        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-600">
+            {allPosts.map((post) => (
+                <BlogPost post={post} />
+            ))}
+        </ul>
     </div>
 </Layout>

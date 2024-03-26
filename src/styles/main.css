@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body,
+#app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+html.dark {
+    background: #121212;
+    color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+}
+
+.scrollbar-visible:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.89);
+}
+

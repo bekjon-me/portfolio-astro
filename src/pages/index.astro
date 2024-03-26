@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { slide } from "astro:transitions";
-import { slide } from 'astro:transitions';
-
-const pageTitle = "Home Page";
+import AnimatedHeading from '../components/AnimatedHeading.astro';
+import About from '../components/About.astro';
 ---
-<Layout title={pageTitle}>
-    <div transition:animate={slide({duration: ".5s"})} transition:name="page">
-        <h2>My awesome blog subtitle</h2>
-        <p>This is the home page</p>
+<Layout title="Bekjon Ishpulatov">
+    <div transition:animate="slide">
+        <div class="relative">
+            <img src="/home.gif" alt="Home background" class="w-full rounded-lg">
+            <AnimatedHeading />
+        </div>
+        <About />
     </div>
 </Layout>

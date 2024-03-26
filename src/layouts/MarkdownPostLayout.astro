@@ -1,0 +1,23 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+<Layout title={frontmatter.title}>
+    <div transition:animate="slide" class="relative overflow-hidden py-10">
+        <!--<div class="relative px-6 lg:px-8 py-4">-->
+        <!--    <div class="mx-auto max-w-prose text-lg">-->
+        <!--        <h1>-->
+        <!--            <span class="block text-center text-3xl font-semibold text-cyan-600">{frontmatter.title}</span>-->
+        <!--        </h1>-->
+        <!--        <p>{frontmatter.pubDate.slice(0, 10)}</p>-->
+        <!--        <p class="mt-4 text-xl leading-8 text-gray-500 dark:text-white/80">{frontmatter.description}</p>-->
+        <!--        <p>Written by: {frontmatter.author}</p>-->
+        <!--        <figure>-->
+        <!--            <img class="w-full rounded-lg" src={frontmatter.image.url} alt={frontmatter.image.alt} width="1310" height="873" />-->
+        <!--            <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>-->
+        <!--        </figure>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <slot />
+    </div>
+</Layout>
