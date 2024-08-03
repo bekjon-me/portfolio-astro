@@ -387,7 +387,8 @@ c-5.23,2.53-10.46,5.05-15.69,7.56h27.89C1490.96,72.21,1491.19,70.53,1491.19,68.3
         };
 
         function animate() {
-            svgContainer.classList.remove("hidden");
+            if (!svgContainer) return;
+            svgContainer?.classList.remove("hidden");
             Array.from(svgElement.querySelectorAll(path)).forEach((el) => {
                 timeline.set(el, {
                     x: `+=${getRandomPosition(-500, 500)}`,
